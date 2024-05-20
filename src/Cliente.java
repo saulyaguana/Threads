@@ -7,8 +7,15 @@ public class Cliente extends Persona {
         this.direccion = direccion;
     }
 
-    public void HacerActual() {
-
+    public int estadoPaquete() {
+        return this.direccion.actual;
     }
+
+    public void HacerActual(Direccion nuevaInfo) {
+        this.direccion.calle1 = nuevaInfo.calle1;
+        this.direccion.calle2 = nuevaInfo.calle2;
+        this.direccion.actual = nuevaInfo.actual;
+    }
+
 
 }
